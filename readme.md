@@ -19,6 +19,7 @@ No contribution needed for this project
 ## Credits
 
 Micah Akai-Nettey
+
 Template for Frontend: https://www.youtube.com/watch?v=wFh0SJVDM9E&t=4808s&pp=ygUkYnVpbGQgYSBwb3J0Zm9saW8gd2Vic2l0ZSB3aXRoIHJlYWN0
 
 ## License
