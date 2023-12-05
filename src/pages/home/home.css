@@ -1,0 +1,130 @@
+/* General styles for all screen sizes */
+.home {
+    grid-template-columns: 4.32fr 7.68fr;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    height: 100vh;
+    /* gap: 200px; */
+}
+
+.home__img {
+    height: 70%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.3);
+}
+
+.home__data {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;
+}
+
+.home__title {
+    position: relative;
+    font-size: var(--h1-font-size);
+    line-height: 1.24;
+    padding-left: 70px;
+}
+
+.home__title span {
+    color: var(--first-color);
+}
+
+.home__title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 32%;
+    width: 40px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+}
+
+.home__description {
+    line-height: 2.125;
+    margin-block: 16px 32px;
+}
+
+.contact__socials {
+    display: flex;
+    column-gap: 16px;
+    padding-bottom: 20px;
+}
+
+.contact__social-link {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    transition: all 0.3s ease;
+}
+
+.contact__social-link:hover {
+    background-color: var(--first-color);
+    color: var(--text-white);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.button-container .button {
+    margin-top: 10px;
+}
+
+/* Responsive styles for tablet screens */
+@media only screen and (max-width: 1036px) {
+    .home {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .home__img {
+        max-width: 70%;
+        height: auto; /* Update the height to 'auto' to maintain aspect ratio */
+    }
+
+    .home__data {
+        padding-left: 0;
+    }
+
+    .home__title::before {
+        top: 25%;
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media only screen and (max-width: 480px) {
+    .home__title {
+        font-size: 24px;
+    }
+
+    .home__description {
+        font-size: 16px;
+    }
+
+    .home__img {
+        max-width: 80%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container .button {
+        margin-top: 10px;
+    }
+}
