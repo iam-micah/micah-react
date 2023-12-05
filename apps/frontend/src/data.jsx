@@ -67,7 +67,7 @@ export const personalInfo = [
     {
         id: 2,
         title: "Last Name : ",
-        description: "Nettey",
+        description: "Akai-Nettey",
     },
 
     {
@@ -78,32 +78,14 @@ export const personalInfo = [
 
     {
         id: 4,
-        title: "Address : ",
-        description: "Medford MA, 02155",
-    },
-
-    {
-        id: 5,
         title: "Email : ",
         description: "micah@micahnettey.com",
     },
 
     {
         id: 6,
-        title: "Langages : ",
-        description: "English",
-    },
-
-    {
-        id: 7,
         title: "Personal YouTube : ",
         description: "@micahnettey",
-    },
-
-    {
-        id: 8,
-        title: "Music YouTube : ",
-        description: "@youraverage_guitarist",
     },
 ];
 
@@ -195,51 +177,36 @@ export const resume = [
 
 export const skills = [
     {
-        id: 1,
-        title: "Html",
-        percentage: "25",
+        title: "JavaScript",
+        icon: "FaJsSquare",
     },
-
     {
-        id: 2,
-        title: "Javascript",
-        percentage: "89",
+        title: "HTML",
+        icon: "FaHtml5",
     },
-
     {
-        id: 3,
-        title: "Css",
-        percentage: "70",
+        title: "CSS",
+        icon: "FaCss3Alt",
     },
-
     {
-        id: 4,
-        title: "Php",
-        percentage: "66",
+        title: "Python",
+        icon: "FaPython",
     },
-
     {
-        id: 5,
-        title: "Wordpress",
-        percentage: "95",
+        title: "TypeScript",
+        icon: "FaJsSquare",
     },
-
     {
-        id: 6,
-        title: "Jquery",
-        percentage: "50",
-    },
-
-    {
-        id: 7,
-        title: "Angular",
-        percentage: "65",
-    },
-
-    {
-        id: 8,
         title: "React",
-        percentage: "45",
+        icon: "FaReact",
+    },
+    {
+        title: "Node",
+        icon: "FaNodeJs",
+    },
+    {
+        title: "C++",
+        icon: "FaCuttlefish",
     },
 ];
 
