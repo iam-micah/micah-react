@@ -72,14 +72,14 @@ const About = () => {
 
             <div className="separator"></div>
 
-            {/* <section className="skills">
+            <section className="skills">
                 <h3 className="section__subtitle subtitle__center">
                     My Skills
                 </h3>
                 <div className="skills__container grid">
                     <Skills />
                 </div>
-            </section> */}
+            </section>
         </main>
     );
 };

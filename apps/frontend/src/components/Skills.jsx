@@ -1,27 +1,25 @@
 import React from "react";
 import { skills } from "../data";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import { IconContext } from "react-icons";
+import * as Icons from "react-icons/fa"; // import all icons from Font Awesome
 
 const Skills = () => {
     return (
-        <>
-            {skills.map(({ title, percentage }, index) => {
+        <IconContext.Provider value={{ size: "4em" }}>
+            {skills.map(({ title, icon }, index) => {
+                const IconComponent = Icons[icon]; // get the specific icon component
                 return (
-                    <div className="progress__box" key={index}>
-                        <div className="progress__circle">
-                            <CircularProgressbar
-                                strokeWidth={7.5}
-                                text={`${percentage}%`}
-                                value={percentage}
+                    <div className="skill__box" key={index}>
+                        {IconComponent && (
+                            <IconComponent
+                                style={{ color: "var(--first-color)" }}
                             />
-                        </div>
-
+                        )}
                         <h3 className="skills__title">{title}</h3>
                     </div>
                 );
             })}
-        </>
+        </IconContext.Provider>
     );
 };
 
