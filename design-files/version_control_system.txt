@@ -1,0 +1,72 @@
+### Branch Naming Conventions:
+
+1. **Main Branch:**
+   - `main`
+
+2. **Feature Branches:**
+   - `feature/{feature-name}`: For developing new features. 
+   Example: `feature/user-authentication`.
+
+3. **Bugfix Branches:**
+   - `bugfix/{bug-description}`: For fixing specific bugs. Example: `bugfix/login-page-error`.
+
+4. **Hotfix Branches:**
+   - `hotfix/{issue-description}`: For urgent fixes in production. Example: `hotfix/security-patch`.
+
+5. **Release Branches:**
+   - `release/{version-number}`: Prepare for a new release. Example: `release/v1.0.0`.
+
+### Workflow:
+
+1. **Start from Main:**
+   - Always create feature branches from the `main` branch.
+
+2. **Naming Conventions:**
+   - Be consistent with your branch names. Use lowercase and hyphens for readability.
+
+3. **Feature Development:**
+   - Create a feature branch for each new feature or task.
+   - Work on the feature branch, and regularly merge changes from `main` to keep it up to date.
+   - Once the feature is complete, create a pull request to merge it back into `main`.
+
+4. **Bugfixing:**
+   - For bug fixes, create a branch from `main`, fix the bug, and create a pull request for merging back into `main`.
+
+5. **Hotfixes:**
+   - In case of urgent production fixes, create a branch from `main`, fix the issue, and create a pull request. Also, merge these changes back into the `main` and `develop` branches if applicable.
+
+6. **Releases:**
+   - When preparing for a release, create a release branch from `main`.
+   - Perform necessary testing on the release branch.
+   - Once ready, merge the release branch into `main` for deployment.
+
+### Pushing Code:
+
+1. **Pushing Feature Branches:**
+   - Push feature branches to the remote repository regularly.
+
+2. **Pull Requests:**
+   - Open pull requests for code review before merging changes into the `main` branch.
+
+3. **Continuous Integration:**
+   - Integrate continuous integration tools to automate testing on feature branches and pull requests.
+
+4. **Version Tagging:**
+   - Tag releases with version numbers. For example, use Git tags like `v1.0.0` for releases.
+
+### Example Workflow:
+
+```bash
+# Create a new feature branch
+git checkout -b feature/new-feature
+
+# Work on the feature branch, make commits
+
+# Push changes to remote repository
+git push origin feature/new-feature
+
+# Create a pull request for code review
+# After approval, merge the feature branch into main
+```
+
+Remember, these are general guidelines, and you can adapt them based on your team's preferences and project requirements. Additionally, tools like GitFlow or GitHub Flow can offer more structured workflows if needed.
