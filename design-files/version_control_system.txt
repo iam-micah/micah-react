@@ -21,10 +21,7 @@
 1. **Start from Main:**
    - Always create feature branches from the `main` branch.
 
-2. **Naming Conventions:**
-   - Be consistent with your branch names. Use lowercase and hyphens for readability.
-
-3. **Feature Development:**
+2. **Feature Development:**
    - Create a feature branch for each new feature or task.
    - Work on the feature branch, and regularly merge changes from `main` to keep it up to date.
    - Once the feature is complete, create a pull request to merge it back into `main`.
@@ -68,5 +65,3 @@ git push origin feature/new-feature
 # Create a pull request for code review
 # After approval, merge the feature branch into main
 ```
-
-Remember, these are general guidelines, and you can adapt them based on your team's preferences and project requirements. Additionally, tools like GitFlow or GitHub Flow can offer more structured workflows if needed.
