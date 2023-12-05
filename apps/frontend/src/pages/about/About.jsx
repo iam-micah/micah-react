@@ -1,10 +1,10 @@
 import React from "react";
-import Info from "../../components/info";
-import Skills from "../../components/Skills";
-import Stats from "../../components/Stats";
+import Info from "../../components/Info.jsx";
+import Skills from "../../components/Skills.jsx";
+import Stats from "../../components/Stats.jsx";
 import { FaDownload } from "react-icons/fa";
-import { resume } from "../../data";
-import ResumeItem from "../../components/ResumeItem";
+import { resume } from "../../data.jsx";
+import ResumeItem from "../../components/ResumeItem.jsx";
 import Resume from "../../assets/micah-akai-nettey-resume.pdf";
 import "./about.css";
 
