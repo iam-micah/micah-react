@@ -6,7 +6,8 @@ This is my personal website built with React.
 
 ## Installation
 
-No installation needed for this project
+To get the frontend working, cd into `apps` and `frontend`, then run `npm install`
+while you're in that directory. Then you can run `npm run dev`
 
 ## Usage
 
