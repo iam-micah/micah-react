@@ -36,13 +36,20 @@ const Home = () => {
                     </h1>
 
                     <p className="home__description">
-                        Hi There. I'm Micah Nettey, a Computer Science major and
-                        Entrepreneurship minor at Tufts University, and a
-                        Youtuber.
+                        Hello Hello Hello... <br />
+                        I'm Micah Nettey, a Computer Science major with an
+                        entrepreneurial flair at Tufts University. I'm also a
+                        YouTuber (check out my channel at the link below)
                         <br />
-                        <br />I am currently searching for a full time software
-                        engineering job, so please don't hesitate to reach out
-                        to me on my contact page.
+                        <br />
+                        I'm on the lookout for my next adventure in Software
+                        Engineering, so if you've got any opportunies for me to
+                        explore, please reach out to me on my contact page, or
+                        just shoot me an email at{" "}
+                        <a href="mailto:micah@micahnettey.com">
+                            micah@micahnettey.com
+                        </a>
+                        . Let's make some magic happen together!
                     </p>
                     <div className="contact__socials">
                         <a

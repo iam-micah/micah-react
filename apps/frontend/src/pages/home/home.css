@@ -93,7 +93,7 @@
 
     .home__img {
         max-width: 70%;
-        height: auto; /* Update the height to 'auto' to maintain aspect ratio */
+        height: 50vh; /* Update the height to 'auto' to maintain aspect ratio */
     }
 
     .home__data {
@@ -117,6 +117,7 @@
 
     .home__img {
         max-width: 80%;
+        height: 50vh;
     }
 
     .button-container {
