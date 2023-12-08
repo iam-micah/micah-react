@@ -189,55 +189,60 @@
     .info__list,
     .stats,
     .resume__container {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-        justify-items: center; /* Center items horizontally */
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .resume__icon {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .resume__icon-container {
+        margin: 0;
+        padding: 0;
     }
 
     .info__list {
-        margin-bottom: 20px; /* Reduce margin for smaller screens */
+        margin-bottom: 20px;
     }
 
     .section__subtitle {
-        margin-bottom: 15px; /* Reduce margin for smaller screens */
+        margin-bottom: 15px;
     }
 
     .separator {
-        max-width: 60%; /* Adjust separator width for smaller screens */
-        margin: 56px auto; /* Adjust margin for smaller screens */
+        max-width: 60%;
+        margin: 56px auto;
     }
 
     .skills__container {
-        grid-template-columns: repeat(
-            2,
-            1fr
-        ); /* 2 columns for skills on smaller screens */
-        row-gap: 30px; /* Reduce gap for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
     }
 
     .resume__item::before {
-        left: 10px; /* Adjust the position of the item separator for smaller screens */
+        left: 10px;
     }
 
     .resume__subtitle {
-        font-size: var(
-            --h2-font-size
-        ); /* Increase font size for subtitles on smaller screens */
+        font-size: var(--h4-font-size);
     }
 
     .stats__box,
     .resume__item {
-        text-align: center; /* Center stats content and resume items */
+        text-align: center;
     }
 
     .resume__item::before {
-        display: none; /* Hide the item separator on small screens */
+        display: none;
     }
 
     .separator {
-        max-width: 100%; /* Centered separator width */
+        max-width: 100%;
     }
 
-    /* Centered Section Titles */
     .resume__section-title,
     .about__info h3.section__subtitle {
         text-align: center;

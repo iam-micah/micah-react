@@ -83,7 +83,7 @@ export const personalInfo = [
     },
 
     {
-        id: 6,
+        id: 5,
         title: "Personal YouTube : ",
         description: "@micahnettey",
     },
