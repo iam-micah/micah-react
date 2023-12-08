@@ -1,4 +1,5 @@
 import React from "react";
+import parse from "html-react-parser";
 import { personalInfo } from "../data";
 
 const Info = () => {
@@ -8,7 +9,9 @@ const Info = () => {
                 return (
                     <li className="info__item" key={index}>
                         <span className="info__title">{title}</span>
-                        <span className="info__description">{description}</span>
+                        <span className="info__description">
+                            {parse(description)}
+                        </span>
                     </li>
                 );
             })}

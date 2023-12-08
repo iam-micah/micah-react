@@ -83,9 +83,10 @@ export const personalInfo = [
     },
 
     {
-        id: 6,
+        id: 5,
         title: "Personal YouTube : ",
-        description: "@micahnettey",
+        description:
+            "<a href='https://www.youtube.com/@micahnettey/' target='_blank'> @micahnettey </a>",
     },
 ];
 
@@ -104,7 +105,7 @@ export const stats = [
 
     {
         id: 3,
-        no: "2",
+        no: "3",
         title: "SWE <br /> Internships",
     },
 
@@ -120,40 +121,41 @@ export const resume = [
         id: 1,
         category: "experience",
         icon: <FaBriefcase />,
-        year: "June 2023 - September 2023",
-        title: "PRODUCT MANAGER INTERN <span> Raid The Room LLC </span>",
-        desc: "Spearheaded the creation and launch of a metaverse game that thrives on teamwork. Through tailored challenges, I created an environment where collaboration is key, pushing players to rely on each other's strengths while navigating digital realms.",
-        techstack: "React, Axios, HTML, TypeScript, Express",
+        year: "June 2022 - Present",
+        title: "SOFTWARE ENGINEERING INTERN <span> Raid The Room LLC </span>",
+        desc: "<ul><li>Built backend tool that tracks live user information such as user-to-user communication time and exploration time metrics on the platform.</li> <li> Created a browser based environment using the Gather API to create a collaborative game that was used by 20+ users.<li></ul>",
+        techstack: "React, Axios, HTML, TypeScript, Express, Gather API",
     },
 
     {
         id: 2,
         category: "experience",
         icon: <FaBriefcase />,
-        year: "June 2023 - August 2023",
+        year: "June 2023 - September 2023",
         title: "SOFTWARE ENGINEERING INTERN <span> Equimpa </span>",
-        desc: "My role focused on meticulous upkeep of code, executing smooth package upgrades and swiftly tackling any disruptive changes in the product (Blueprint). In parallel, I used the React library to create new frontend features to effectively enhanced the functionality of Blueprint",
-        techstack: "React, Axios, HTML, TypeScript, JavaScript, CSS",
+        desc: "<ul><li>Build new React components for displaying dashboard information for a web-app product using ChartJS, ReactJS, Material-UI.</li><li>Executed package upgrades and fixed disruptive changes while running code maintenance for a legacy code base.</li>",
+        techstack:
+            "React, Axios, HTML, TypeScript, JavaScript, CSS, Material-UI, ChartJS",
     },
 
     {
         id: 3,
         category: "experience",
         icon: <FaBriefcase />,
-        year: "July 2022 - 2022",
-        title: "SOFTWARE ENGINEERING INTERN <span> Raid the Room LLC </span>",
-        desc: "Built a tool that tracks live user information, which includes amount of time a user spent talking to another user on the metaverse, the total area the user walked on the metaverse, and the different number of people a specific user interacted with on the metaverse. The tool was built using TypeScript and has been used for 5 different metaverse events hosted by 4 different client companies.",
-        techstack: "TypeScript, Gather API",
+        year: "July 2022 - August 2022",
+        title: "RESEARCH ASSISTANT <span> MuLIP, Tufts University </span>",
+        desc: "<ul><li>Created a mobile and web-based augmented reality application for rendering Reinforcement Learning backend methodologies using Unity, Vuforia Studions, Python, JavaScript, C#.</li><li>Built an external Wi-Fi connection module for Spike Prime LEGO kit using ESP8266 and MQTT</li></ul>",
+        techstack:
+            "Reinforcement Learning, Python, Arduino, ROS, Unity, C#, JavaScript, MQTT, ESP8266, Vuforia",
     },
 
     {
         id: 4,
-        category: "experience",
-        icon: <FaBriefcase />,
-        year: "July 2022 - August 2022",
-        title: "RESEARCH ASSISTANT <span> MuLIP, Tufts University </span>",
-        desc: "Built an external Wi-Fi module for SPIKE PRIME LEGO kit using the ESP8266 and MQTT protocol, and a web-based mobile application using Unity, C# and Python <br /> Developed an Augmented Reality Interface using Unity Engine and Vuforia libraries to create easy to use apps that teach K-12 students Reinforcement Learning concepts",
-        techstack: "Reinforcement Learning, Python, Arduino, ROS",
+        category: "education",
+        icon: <FaGraduationCap />,
+        year: "2020 - 2024",
+        title: "COMPUTER SCIENCE <span> Tufts University, Medford MA </span>",
+        desc: "<ul><li>Algorithms</li><li>Human Computer Interaction</li><li>Security</li><li>Database Systems</li><li>Programming Languages</li><li>Data Structures</li><li>Computation Theory</li><li>Probability and Statistics</li></ul>",
     },
 
     {
@@ -161,17 +163,8 @@ export const resume = [
         category: "education",
         icon: <FaGraduationCap />,
         year: "2020 - 2024",
-        title: "COMPUTER SCIENCE <span> Tufts University, Medford MA </span>",
-        desc: "",
-    },
-
-    {
-        id: 6,
-        category: "education",
-        icon: <FaGraduationCap />,
-        year: "2020 - 2024",
         title: "ENTREPRENEURSHIP <span> Tufts Univeristy, Medford MA </span>",
-        desc: "",
+        desc: "<ul><li>Entrepreneurial Business Planning</li><li>Entrepreneurial Business Law</li><li>Entrepreneurial Marketing</li><li>Entrepreneurial Finance</li><li>Entrepreneurial Leadership</li></ul>",
     },
 ];
 
