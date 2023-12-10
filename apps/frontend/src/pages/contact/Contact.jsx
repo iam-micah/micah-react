@@ -1,4 +1,7 @@
 import React from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import {
     FaEnvelopeOpen,
     FaPhoneSquareAlt,
@@ -13,6 +16,30 @@ import { FiSend } from "react-icons/fi";
 import "./contact.css";
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_73opnkf",
+                "template_5aipbu8",
+                form.current,
+                "Uf2xH3xr2OvTCh2Op"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+
+        e.target.reset();
+    };
+
     return (
         <section className="contact section">
             <h2 className="section__title">
@@ -38,15 +65,6 @@ const Contact = () => {
                                 </h4>
                             </div>
                         </div>
-
-                        {/* <div className="info__item">
-                            <FaPhoneSquareAlt className="info__icon" />
-
-                            <div>
-                                <span className="info__title">Call me</span>
-                                <h4 className="info__desc">617-111-1111</h4>
-                            </div>
-                        </div> */}
                     </div>
 
                     <div className="contact__socials">
@@ -90,13 +108,22 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form className="contact__form">
+                <form
+                    className="contact__form"
+                    ref={form}
+                    onSubmit={sendEmail}
+                    // method="post"
+                    // action="/info.php"
+                >
                     <div className="form__input-group">
                         <div className="form__input-div">
                             <input
                                 type="text"
                                 placeholder="Name"
                                 className="form__control"
+                                // id="name"
+                                name="name"
+                                required
                             />
                         </div>
                         <div className="form__input-div">
@@ -104,6 +131,9 @@ const Contact = () => {
                                 type="email"
                                 placeholder="Email"
                                 className="form__control"
+                                // id="email"
+                                name="email"
+                                required
                             />
                         </div>
 
@@ -112,6 +142,9 @@ const Contact = () => {
                                 type="text"
                                 placeholder="Subject"
                                 className="form__control"
+                                // id="subject"
+                                name="subject"
+                                required
                             />
                         </div>
                     </div>
@@ -120,6 +153,9 @@ const Contact = () => {
                         <textarea
                             placeholder="Message"
                             className="form__control textarea"
+                            // id="message"
+                            name="message"
+                            required
                         ></textarea>
                     </div>
 
