@@ -3,9 +3,9 @@
 ---
 
 ![GitHub](https://img.shields.io/github/license/iam-micah/micah-react)
-![GitHub last commit](https://img.shields.io/github/last-commit//iam-micah/micah-react)
-![GitHub issues](https://img.shields.io/github/issues-raw//iam-micah/micah-react)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw//iam-micah/micah-react)
+![GitHub last commit](https://img.shields.io/github/last-commit/iam-micah/micah-react)
+![GitHub issues](https://img.shields.io/github/issues-raw/iam-micah/micah-react)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/iam-micah/micah-react)
 
 ---
 
