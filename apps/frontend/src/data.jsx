@@ -8,6 +8,8 @@ import {
     FaCode,
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
+import React, { useState, useEffect } from "react";
+import { fetchSheetData } from "./sheets/axiosFetch";
 
 import Work1 from "./assets/blocked.png";
 // import Work2 from "./assets/project-2.jpg";
@@ -26,6 +28,31 @@ import Theme7 from "./assets/yellowgreen.png";
 import Theme8 from "./assets/orange.png";
 import Theme9 from "./assets/green.png";
 import Theme10 from "./assets/yellow.png";
+
+export const WebsiteData = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const getData = async () => {
+            const sheetData = await fetchSheetData();
+            setData(sheetData);
+        };
+        getData();
+    }, []);
+    return (
+        <div>
+            {data ? (
+                <ul>
+                    <li>{data[1][1]}</li>
+                    <li>{data[1]}</li>
+                    <li>{data[2]}</li>
+                </ul>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    );
+};
 
 export const links = [
     {
