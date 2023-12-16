@@ -83,26 +83,14 @@ export const stats = async () => {
     }
 };
 
-export const StatsData = () => {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetchSheetData("stats").then(setData);
-    }, []);
-
-    return (
-        <div>
-            {data ? (
-                <ul>
-                    <li>{data[1][1]}</li>
-                    <li>{data[1]}</li>
-                    <li>{data[2]}</li>
-                </ul>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
+export const skills = async () => {
+    try {
+        const sheetData = await fetchSheetData("skills");
+        return transformData(sheetData);
+    } catch (error) {
+        console.error("Error fetching data", error);
+        return [];
+    }
 };
 
 export const ResumeData = () => {
@@ -126,32 +114,6 @@ export const ResumeData = () => {
         </div>
     );
 };
-
-// export const stats = [
-//     {
-//         id: 1,
-//         no: "1+",
-//         title: "Years of <br /> Experience",
-//     },
-
-//     {
-//         id: 2,
-//         no: "4",
-//         title: "Completed <br /> Projects",
-//     },
-
-//     {
-//         id: 3,
-//         no: "3",
-//         title: "SWE <br /> Internships",
-//     },
-
-//     {
-//         id: 4,
-//         no: "1",
-//         title: " Research <br /> Paper",
-//     },
-// ];
 
 export const resume = [
     {
@@ -202,41 +164,6 @@ export const resume = [
         year: "2020 - 2024",
         title: "ENTREPRENEURSHIP <span> Tufts Univeristy, Medford MA </span>",
         desc: "<ul><li>Entrepreneurial Business Planning</li><li>Entrepreneurial Business Law</li><li>Entrepreneurial Marketing</li><li>Entrepreneurial Finance</li><li>Entrepreneurial Leadership</li></ul>",
-    },
-];
-
-export const skills = [
-    {
-        title: "JavaScript",
-        icon: "FaJsSquare",
-    },
-    {
-        title: "HTML",
-        icon: "FaHtml5",
-    },
-    {
-        title: "CSS",
-        icon: "FaCss3Alt",
-    },
-    {
-        title: "Python",
-        icon: "FaPython",
-    },
-    {
-        title: "TypeScript",
-        icon: "FaJsSquare",
-    },
-    {
-        title: "React",
-        icon: "FaReact",
-    },
-    {
-        title: "Node",
-        icon: "FaNodeJs",
-    },
-    {
-        title: "C++",
-        icon: "FaCuttlefish",
     },
 ];
 
