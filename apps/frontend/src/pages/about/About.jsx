@@ -7,8 +7,15 @@ import { resume } from "../../data.jsx";
 import ResumeItem from "../../components/ResumeItem.jsx";
 import Resume from "../../assets/micah-akai-nettey-resume.pdf";
 import "./about.css";
+import { useState, useEffect } from "react";
 
 const About = () => {
+    const [resumeData, setResumeData] = useState(null);
+
+    useEffect(() => {
+        resume().then(setResumeData);
+    }, []);
+
     return (
         <main className="section container">
             <section className="about">
@@ -52,20 +59,28 @@ const About = () => {
                 <div className="resume__container grid">
                     <div className="resume__data">
                         <h4 className="resume__section-title">Experience</h4>
-                        {resume.map((val) => {
-                            if (val.category === "experience") {
-                                return <ResumeItem key={val.id} {...val} />;
-                            }
-                        })}
+                        {resumeData ? (
+                            resumeData.map((val) => {
+                                if (val.category === "experience") {
+                                    return <ResumeItem key={val.id} {...val} />;
+                                }
+                            })
+                        ) : (
+                            <p>Loading...</p>
+                        )}
                     </div>
 
                     <div className="resume__data">
                         <h4 className="resume__section-title">Education</h4>
-                        {resume.map((val) => {
-                            if (val.category === "education") {
-                                return <ResumeItem key={val.id} {...val} />;
-                            }
-                        })}
+                        {resumeData ? (
+                            resumeData.map((val) => {
+                                if (val.category === "education") {
+                                    return <ResumeItem key={val.id} {...val} />;
+                                }
+                            })
+                        ) : (
+                            <p>Loading...</p>
+                        )}
                     </div>
                 </div>
             </section>

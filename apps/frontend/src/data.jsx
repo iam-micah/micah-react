@@ -33,6 +33,8 @@ const iconMapping = {
     '<FaFolderOpen className="nav__icon" />': (
         <FaFolderOpen className="nav__icon" />
     ),
+    "<FaBriefcase />": <FaBriefcase />,
+    "<FaGraduationCap />": <FaGraduationCap />,
 };
 
 const transformData = (sheetData) => {
@@ -93,79 +95,15 @@ export const skills = async () => {
     }
 };
 
-export const ResumeData = () => {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetchSheetData("resume").then(setData);
-    }, []);
-
-    return (
-        <div>
-            {data ? (
-                <ul>
-                    <li>{data[1][1]}</li>
-                    <li>{data[1]}</li>
-                    <li>{data[2]}</li>
-                </ul>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
+export const resume = async () => {
+    try {
+        const sheetData = await fetchSheetData("resume");
+        return transformData(sheetData);
+    } catch (error) {
+        console.error("Error fetching data", error);
+        return [];
+    }
 };
-
-export const resume = [
-    {
-        id: 1,
-        category: "experience",
-        icon: <FaBriefcase />,
-        year: "June 2022 - Present",
-        title: "SOFTWARE ENGINEERING INTERN <span> Raid The Room LLC </span>",
-        desc: "<ul><li>Built backend tool that tracks live user information such as user-to-user communication time and exploration time metrics on the platform.</li> <li> Created a browser based environment using the Gather API to create a collaborative game that was used by 20+ users.<li></ul>",
-        techstack: "React, Axios, HTML, TypeScript, Express, Gather API",
-    },
-
-    {
-        id: 2,
-        category: "experience",
-        icon: <FaBriefcase />,
-        year: "June 2023 - September 2023",
-        title: "SOFTWARE ENGINEERING INTERN <span> Equimpa </span>",
-        desc: "<ul><li>Build new React components for displaying dashboard information for a web-app product using ChartJS, ReactJS, Material-UI.</li><li>Executed package upgrades and fixed disruptive changes while running code maintenance for a legacy code base.</li>",
-        techstack:
-            "React, Axios, HTML, TypeScript, JavaScript, CSS, Material-UI, ChartJS",
-    },
-
-    {
-        id: 3,
-        category: "experience",
-        icon: <FaBriefcase />,
-        year: "July 2022 - August 2022",
-        title: "RESEARCH ASSISTANT <span> MuLIP, Tufts University </span>",
-        desc: "<ul><li>Created a mobile and web-based augmented reality application for rendering Reinforcement Learning backend methodologies using Unity, Vuforia Studions, Python, JavaScript, C#.</li><li>Built an external Wi-Fi connection module for Spike Prime LEGO kit using ESP8266 and MQTT</li></ul>",
-        techstack:
-            "Reinforcement Learning, Python, Arduino, ROS, Unity, C#, JavaScript, MQTT, ESP8266, Vuforia",
-    },
-
-    {
-        id: 4,
-        category: "education",
-        icon: <FaGraduationCap />,
-        year: "2020 - 2024",
-        title: "COMPUTER SCIENCE <span> Tufts University, Medford MA </span>",
-        desc: "<ul><li>Algorithms</li><li>Human Computer Interaction</li><li>Security</li><li>Database Systems</li><li>Programming Languages</li><li>Data Structures</li><li>Computation Theory</li><li>Probability and Statistics</li></ul>",
-    },
-
-    {
-        id: 5,
-        category: "education",
-        icon: <FaGraduationCap />,
-        year: "2020 - 2024",
-        title: "ENTREPRENEURSHIP <span> Tufts Univeristy, Medford MA </span>",
-        desc: "<ul><li>Entrepreneurial Business Planning</li><li>Entrepreneurial Business Law</li><li>Entrepreneurial Marketing</li><li>Entrepreneurial Finance</li><li>Entrepreneurial Leadership</li></ul>",
-    },
-];
 
 export const portfolio = [
     {

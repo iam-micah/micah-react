@@ -15,7 +15,7 @@ const Skills = () => {
         <IconContext.Provider value={{ size: "4em" }}>
             {skillsData ? (
                 skillsData.map(({ title, icon }, index) => {
-                    const IconComponent = Icons[icon]; // get the specific icon component
+                    const IconComponent = Icons[icon];
                     return (
                         <div className="skill__box" key={index}>
                             {IconComponent && (
