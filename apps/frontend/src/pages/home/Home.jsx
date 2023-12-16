@@ -113,7 +113,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <LinksData />
             </div>
 
@@ -127,7 +127,7 @@ const Home = () => {
 
             <div>
                 <ResumeData />
-            </div>
+            </div> */}
         </section>
     );
 };

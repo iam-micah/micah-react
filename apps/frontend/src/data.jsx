@@ -12,11 +12,6 @@ import React, { useState, useEffect } from "react";
 import { fetchSheetData } from "./sheets/axiosFetch";
 
 import Work1 from "./assets/blocked.png";
-// import Work2 from "./assets/project-2.jpg";
-// import Work3 from "./assets/project-3.jpeg";
-// import Work4 from "./assets/project-4.jpeg";
-// import Work5 from "./assets/project-5.jpg";
-// import Work6 from "./assets/project-6.jpg";
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -28,6 +23,17 @@ import Theme7 from "./assets/yellowgreen.png";
 import Theme8 from "./assets/orange.png";
 import Theme9 from "./assets/green.png";
 import Theme10 from "./assets/yellow.png";
+
+const iconMapping = {
+    '<FaEnvelopeOpen className="nav__icon" />': (
+        <FaEnvelopeOpen className="nav__icon" />
+    ),
+    '<FaHome className="nav__icon" />': <FaHome className="nav__icon" />,
+    '<FaUser className="nav__icon" />': <FaUser className="nav__icon" />,
+    '<FaFolderOpen className="nav__icon" />': (
+        <FaFolderOpen className="nav__icon" />
+    ),
+};
 
 export const LinksData = () => {
     const [data, setData] = useState(null);
@@ -50,6 +56,65 @@ export const LinksData = () => {
         </div>
     );
 };
+
+const transformData = (sheetData) => {
+    if (!sheetData || sheetData.length === 0) return [];
+
+    const headers = sheetData[0];
+
+    return sheetData.slice(1).map((row) => {
+        const rowData = {};
+        row.forEach((cell, index) => {
+            if (headers[index] === "icon" && iconMapping[cell]) {
+                rowData[headers[index]] = iconMapping[cell];
+            } else {
+                rowData[headers[index]] = cell;
+            }
+        });
+        // console.log(rowData);
+        return rowData;
+    });
+};
+
+export const links = async () => {
+    try {
+        const sheetData = await fetchSheetData("links");
+        return transformData(sheetData);
+    } catch (error) {
+        console.error("Error fetching data", error);
+        return [];
+    }
+};
+
+// export const links = [
+//     {
+//         id: 1,
+//         name: "Home",
+//         icon: <FaHome className="nav__icon" />,
+//         path: "/",
+//     },
+
+//     {
+//         id: 2,
+//         name: "About",
+//         icon: <FaUser className="nav__icon" />,
+//         path: "/about",
+//     },
+
+//     {
+//         id: 3,
+//         name: "Portfolio",
+//         icon: <FaFolderOpen className="nav__icon" />,
+//         path: "/portfolio",
+//     },
+
+//     {
+//         id: 4,
+//         name: "Contact",
+//         icon: <FaEnvelopeOpen className="nav__icon" />,
+//         path: "/contact",
+//     },
+// ];
 
 export const PersonalInfoData = () => {
     const [data, setData] = useState(null);
@@ -116,36 +181,6 @@ export const ResumeData = () => {
         </div>
     );
 };
-
-export const links = [
-    {
-        id: 1,
-        name: "Home",
-        icon: <FaHome className="nav__icon" />,
-        path: "/",
-    },
-
-    {
-        id: 2,
-        name: "About",
-        icon: <FaUser className="nav__icon" />,
-        path: "/about",
-    },
-
-    {
-        id: 3,
-        name: "Portfolio",
-        icon: <FaFolderOpen className="nav__icon" />,
-        path: "/portfolio",
-    },
-
-    {
-        id: 4,
-        name: "Contact",
-        icon: <FaEnvelopeOpen className="nav__icon" />,
-        path: "/contact",
-    },
-];
 
 export const personalInfo = [
     {

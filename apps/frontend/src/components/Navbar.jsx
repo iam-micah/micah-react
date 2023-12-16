@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { links } from "../data";
 import "./navbar.css";
+import parse from "html-react-parser";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [navLinks, setNavLinks] = useState(null);
+
+    useEffect(() => {
+        links().then((data) => {
+            setNavLinks(data);
+        });
+    }, []);
 
     return (
         <nav className="nav">
@@ -12,8 +20,8 @@ const Navbar = () => {
                 className={`${showMenu ? "nav__menu show-menu" : "nav__menu"}`}
             >
                 <ul className="nav__list">
-                    {links.map(({ name, icon, path }, index) => {
-                        return (
+                    {navLinks ? (
+                        navLinks.map(({ name, icon, path }, index) => (
                             <li className="nav__item" key={index}>
                                 <NavLink
                                     to={path}
@@ -28,8 +36,10 @@ const Navbar = () => {
                                     <h3 className="nav__name">{name}</h3>
                                 </NavLink>
                             </li>
-                        );
-                    })}
+                        ))
+                    ) : (
+                        <li>Loading...</li>
+                    )}
                 </ul>
             </div>
 
