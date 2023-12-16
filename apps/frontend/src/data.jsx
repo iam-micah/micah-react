@@ -29,16 +29,79 @@ import Theme8 from "./assets/orange.png";
 import Theme9 from "./assets/green.png";
 import Theme10 from "./assets/yellow.png";
 
-export const WebsiteData = () => {
+export const LinksData = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        const getData = async () => {
-            const sheetData = await fetchSheetData();
-            setData(sheetData);
-        };
-        getData();
+        fetchSheetData("links").then(setData);
     }, []);
+
+    return (
+        <div>
+            {data ? (
+                <ul>
+                    <li>{data[1][1]}</li>
+                    <li>{data[1]}</li>
+                    <li>{data[2]}</li>
+                </ul>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    );
+};
+
+export const PersonalInfoData = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchSheetData("personalInfo").then(setData);
+    }, []);
+
+    return (
+        <div>
+            {data ? (
+                <ul>
+                    <li>{data[1][1]}</li>
+                    <li>{data[1]}</li>
+                    <li>{data[2]}</li>
+                </ul>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    );
+};
+
+export const StatsData = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchSheetData("stats").then(setData);
+    }, []);
+
+    return (
+        <div>
+            {data ? (
+                <ul>
+                    <li>{data[1][1]}</li>
+                    <li>{data[1]}</li>
+                    <li>{data[2]}</li>
+                </ul>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    );
+};
+
+export const ResumeData = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchSheetData("resume").then(setData);
+    }, []);
+
     return (
         <div>
             {data ? (
