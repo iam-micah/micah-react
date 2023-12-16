@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { links } from "../data";
 import "./navbar.css";
-import parse from "html-react-parser";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);

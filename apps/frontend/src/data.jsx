@@ -35,28 +35,6 @@ const iconMapping = {
     ),
 };
 
-export const LinksData = () => {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetchSheetData("links").then(setData);
-    }, []);
-
-    return (
-        <div>
-            {data ? (
-                <ul>
-                    <li>{data[1][1]}</li>
-                    <li>{data[1]}</li>
-                    <li>{data[2]}</li>
-                </ul>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
-};
-
 const transformData = (sheetData) => {
     if (!sheetData || sheetData.length === 0) return [];
 
@@ -71,7 +49,6 @@ const transformData = (sheetData) => {
                 rowData[headers[index]] = cell;
             }
         });
-        // console.log(rowData);
         return rowData;
     });
 };
@@ -86,56 +63,24 @@ export const links = async () => {
     }
 };
 
-// export const links = [
-//     {
-//         id: 1,
-//         name: "Home",
-//         icon: <FaHome className="nav__icon" />,
-//         path: "/",
-//     },
+export const personalInfo = async () => {
+    try {
+        const sheetData = await fetchSheetData("personalInfo");
+        return transformData(sheetData);
+    } catch (error) {
+        console.error("Error fetching data", error);
+        return [];
+    }
+};
 
-//     {
-//         id: 2,
-//         name: "About",
-//         icon: <FaUser className="nav__icon" />,
-//         path: "/about",
-//     },
-
-//     {
-//         id: 3,
-//         name: "Portfolio",
-//         icon: <FaFolderOpen className="nav__icon" />,
-//         path: "/portfolio",
-//     },
-
-//     {
-//         id: 4,
-//         name: "Contact",
-//         icon: <FaEnvelopeOpen className="nav__icon" />,
-//         path: "/contact",
-//     },
-// ];
-
-export const PersonalInfoData = () => {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        fetchSheetData("personalInfo").then(setData);
-    }, []);
-
-    return (
-        <div>
-            {data ? (
-                <ul>
-                    <li>{data[1][1]}</li>
-                    <li>{data[1]}</li>
-                    <li>{data[2]}</li>
-                </ul>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
+export const stats = async () => {
+    try {
+        const sheetData = await fetchSheetData("stats");
+        return transformData(sheetData);
+    } catch (error) {
+        console.error("Error fetching data", error);
+        return [];
+    }
 };
 
 export const StatsData = () => {
@@ -182,64 +127,31 @@ export const ResumeData = () => {
     );
 };
 
-export const personalInfo = [
-    {
-        id: 1,
-        title: "First Name : ",
-        description: "Micah",
-    },
+// export const stats = [
+//     {
+//         id: 1,
+//         no: "1+",
+//         title: "Years of <br /> Experience",
+//     },
 
-    {
-        id: 2,
-        title: "Last Name : ",
-        description: "Akai-Nettey",
-    },
+//     {
+//         id: 2,
+//         no: "4",
+//         title: "Completed <br /> Projects",
+//     },
 
-    {
-        id: 3,
-        title: "Job Status : ",
-        description: "Searching",
-    },
+//     {
+//         id: 3,
+//         no: "3",
+//         title: "SWE <br /> Internships",
+//     },
 
-    {
-        id: 4,
-        title: "Email : ",
-        description: "micah@micahnettey.com",
-    },
-
-    {
-        id: 5,
-        title: "Personal YouTube : ",
-        description:
-            "<a href='https://www.youtube.com/@micahnettey/' target='_blank'> @micahnettey </a>",
-    },
-];
-
-export const stats = [
-    {
-        id: 1,
-        no: "1+",
-        title: "Years of <br /> Experience",
-    },
-
-    {
-        id: 2,
-        no: "4",
-        title: "Completed <br /> Projects",
-    },
-
-    {
-        id: 3,
-        no: "3",
-        title: "SWE <br /> Internships",
-    },
-
-    {
-        id: 4,
-        no: "1",
-        title: " Research <br /> Paper",
-    },
-];
+//     {
+//         id: 4,
+//         no: "1",
+//         title: " Research <br /> Paper",
+//     },
+// ];
 
 export const resume = [
     {

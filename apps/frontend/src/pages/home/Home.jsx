@@ -13,7 +13,6 @@ import {
     FaDownload,
     FaLinkedin,
 } from "react-icons/fa";
-import { LinksData, PersonalInfoData, ResumeData, StatsData } from "../../data";
 
 const Home = () => {
     return (
@@ -112,22 +111,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div>
-                <LinksData />
-            </div>
-
-            <div>
-                <PersonalInfoData />
-            </div>
-
-            <div>
-                <StatsData />
-            </div>
-
-            <div>
-                <ResumeData />
-            </div> */}
         </section>
     );
 };
