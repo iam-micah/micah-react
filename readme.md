@@ -24,16 +24,16 @@ To get the frontend working, follow the following steps:
 
 ## Usage
 
-Visit the website at: [Homepage](http://85.31.232.80)
+Visit the website at: [Homepage](https://www.micahnettey.com/)
 
 ## Features
 
 ## Features
 
 -   **Responsive Design**: The website is fully responsive and optimized for all screen sizes, from desktops to mobile devices.
--   **Portfolio Showcase**: A dedicated section to showcase your projects with images, descriptions, and links to live versions and source code.
--   **Skills Overview**: A section to display your technical skills in a visually appealing manner.
--   **Contact Form**: A contact form that visitors can use to get in touch with you. The form submissions are handled with a backend server.
+-   **Portfolio Showcase**: A dedicated section to showcase my projects with images, descriptions, and links to live versions and source code.
+-   **Skills Overview**: A section to display my technical skills in a visually appealing manner.
+-   **Contact Form**: A contact form that visitors can use to get in touch with me. The form submissions are handled with a backend server.
 -   **Modern Technologies**: Built with modern web technologies like React for the frontend and Node.js for the backend.
 -   **Clean User Interface**: A clean and user-friendly interface that provides a great user experience.
 -   **Dynamic Fields Updated with Google Sheets**: Some sections of the site would change automatically as I use an API from Google sheets to update and render the information in those sections.
@@ -50,8 +50,8 @@ Template for Frontend: [YouTube Link](https://www.youtube.com/watch?v=wFh0SJVDM9
 
 ## License
 
-Not Licensed
+Micah Nettey
 
 ## Contact
 
-Your contact information, micah@micahnettey.com, [LinkedIn](https://www.linkedincom/in/micah-nettey/).
+Contact information, micah@micahnettey.com, [LinkedIn](https://www.linkedincom/in/micah-nettey/).
