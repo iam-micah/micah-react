@@ -5,7 +5,7 @@ import Stats from "../../components/Stats.jsx";
 import { FaDownload } from "react-icons/fa";
 import { resume } from "../../data.jsx";
 import ResumeItem from "../../components/ResumeItem.jsx";
-import Resume from "../../assets/micah-akai-nettey-resume.pdf";
+import Resume from "../../assets/MicahAkaiNetteyResume.pdf";
 import "./about.css";
 import { useState, useEffect } from "react";
 

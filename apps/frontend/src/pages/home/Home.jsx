@@ -3,7 +3,7 @@ import Profile from "../../assets/home.jpg";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import "./home.css";
-import Resume from "../../assets/micah-akai-nettey-resume.pdf";
+import Resume from "../../assets/MicahAkaiNetteyResume.pdf";
 import {
     FaEnvelopeOpen,
     FaPhoneSquareAlt,
