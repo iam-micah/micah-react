@@ -54,4 +54,4 @@ Not Licensed
 
 ## Contact
 
-Your contact information, micah@micahnettey.com, [LinkedIn](https://www.linkedincom/in/micah-nettey/).
+Contact information, micah@micahnettey.com, [LinkedIn](https://www.linkedincom/in/micah-nettey/).
