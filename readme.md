@@ -24,7 +24,7 @@ To get the frontend working, follow the following steps:
 
 ## Usage
 
-Visit the website at: [Homepage](http://85.31.232.80)
+Visit the website at: [Homepage](https://www.micahnettey.com/)
 
 ## Features
 
