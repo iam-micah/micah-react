@@ -13,6 +13,7 @@ const fetchSheetData = async (sheetName) => {
         const response = await instance.get(
             `/values/${sheetName}?key=${apiKeys.googleSheetsApiKey}`
         );
+        console.log("response: ", response);
         return response.data.values;
     } catch (error) {
         console.error("Error fetching sheet data: ", error);
