@@ -6,6 +6,7 @@ import {
     FaBriefcase,
     FaGraduationCap,
     FaCode,
+    FaBlog,
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
 import React, { useState, useEffect } from "react";
@@ -30,6 +31,7 @@ const iconMapping = {
     ),
     '<FaHome className="nav__icon" />': <FaHome className="nav__icon" />,
     '<FaUser className="nav__icon" />': <FaUser className="nav__icon" />,
+    '<FaBlog className="nav__icon" />': <FaBlog className="nav__icon" />,
     '<FaFolderOpen className="nav__icon" />': (
         <FaFolderOpen className="nav__icon" />
     ),
