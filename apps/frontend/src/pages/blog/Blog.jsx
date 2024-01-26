@@ -19,7 +19,7 @@ const Blog = () => {
                 #Discovering Zen in Coding: My Job Search Journey Continues
             </h1>
             <div className="blog-metadata">
-                Posted on January 26, 2024, by Micah Nettey
+                Posted on January 8, 2024, by Micah Nettey
             </div>
             <div className="blog-content">
                 <p>
