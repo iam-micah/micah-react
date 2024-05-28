@@ -19,13 +19,13 @@ const Home = () => {
         <section className="home section grid">
             {/* <img src={Profile} alt="" className="home__img" /> */}
             <iframe
-                className="home__img"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/UPAXCEYxB4w?si=iXY8baIfIIkND7Lt"
-                title="YouTube video player"
+                width="1339"
+                height="753"
+                src="https://www.youtube.com/embed/EMWmVRp85-Q"
+                title="why do I always wear a beanie? answering the million dollar question | 1M - 01"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
             ></iframe>
 
@@ -37,19 +37,12 @@ const Home = () => {
 
                     <p className="home__description">
                         Hello Hello Hello... <br />
-                        I'm Micah Nettey, a Computer Science major with an
-                        entrepreneurial flair at Tufts University. I'm also a
-                        YouTuber (check out my channel at the link below)
+                        I'm Micah Nettey, a Software Engineer at Meta. I'm also
+                        a YouTuber (check out my channel at the link below)
                         <br />
-                        <br />
-                        I'm on the lookout for my next adventure in Software
-                        Engineering, so if you've got any opportunies for me to
-                        explore, please reach out to me on my contact page, or
-                        just shoot me an email at{" "}
-                        <a href="mailto:micah@micahnettey.com">
-                            micah@micahnettey.com
-                        </a>
-                        . Let's make some magic happen together!
+                        <br />I am starting my next big journey of becoming a
+                        millionaire . You can follow this journey on my YouTube
+                        channel.
                     </p>
                     <div className="contact__socials">
                         <a
