@@ -19,8 +19,8 @@ const Home = () => {
         <section className="home section grid">
             {/* <img src={Profile} alt="" className="home__img" /> */}
             <iframe
-                width="1339"
-                height="753"
+                width="560"
+                height="315"
                 src="https://www.youtube.com/embed/EMWmVRp85-Q"
                 title="why do I always wear a beanie? answering the million dollar question | 1M - 01"
                 frameborder="0"
@@ -32,7 +32,7 @@ const Home = () => {
             <div className="home__content">
                 <div className="home__data">
                     <h1 className="home__title">
-                        <span>#Open</span> To Work
+                        <span>#DO</span> HARD THINGS
                     </h1>
 
                     <p className="home__description">
