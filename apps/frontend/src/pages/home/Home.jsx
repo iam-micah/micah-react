@@ -13,6 +13,35 @@ import {
     FaDownload,
     FaLinkedin,
 } from "react-icons/fa";
+import { Container, Box, Typography, LinearProgress } from "@mui/material";
+
+const ProgressSection = () => {
+    const progressItems = [
+        { label: "Forex", progress: 0 },
+        { label: "Content Creation", progress: 0 },
+        { label: "Stock", progress: 0 },
+    ];
+
+    return (
+        <Container className="progress-section">
+            {progressItems.map((item, index) => (
+                <Box key={index} className="progress-item">
+                    <Typography variant="h6" className="progress-label">
+                        {item.label}
+                        <span className="progress-percentage">
+                            {item.progress}%
+                        </span>
+                    </Typography>
+                    <LinearProgress
+                        variant="determinate"
+                        value={item.progress}
+                        className="progress-bar"
+                    />
+                </Box>
+            ))}
+        </Container>
+    );
+};
 
 const Home = () => {
     return (
@@ -34,6 +63,8 @@ const Home = () => {
                     <h1 className="home__title">
                         <span>#DO</span> HARD THINGS
                     </h1>
+
+                    <ProgressSection />
 
                     <p className="home__description">
                         Hello Hello Hello... <br />
